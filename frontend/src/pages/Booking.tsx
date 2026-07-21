@@ -21,7 +21,7 @@ function Booking() {
     e.preventDefault();
     try {
       const res = await axios.post(
-        "http://localhost:5000/api/bookings",
+        "https://style-frame-1i9s.onrender.com/api/bookings",
         formData
       );
       console.log(res.data)
