@@ -24,7 +24,7 @@ function Dashboard() {
 
   const fetchBookings = async () => {
   try {
-    const res = await axios.get("http://localhost:5000/api/bookings");
+    const res = await axios.get("https://style-frame-1i9s.onrender.com/api/bookings");
     setBookings(res.data.bookings);
   } catch (err) {
     console.log(err);
@@ -34,7 +34,7 @@ function Dashboard() {
   const fetchBookingCount = async () => {
   try {
     const res = await axios.get(
-      "http://localhost:5000/api/bookings/count"
+      "https://style-frame-1i9s.onrender.com/api/bookings/count"
     );
 
     setBookingCount(res.data.total);
@@ -46,7 +46,7 @@ function Dashboard() {
   const fetchGalleryCount = async () => {
   try {
     const res = await axios.get(
-      "http://localhost:5000/api/gallery/count"
+      "https://style-frame-1i9s.onrender.com/api/gallery/count"
     );
 
     setGalleryCount(res.data.total);
@@ -69,7 +69,7 @@ function Dashboard() {
 
     try {
       const res = await axios.post(
-        "http://localhost:5000/api/gallery/upload",
+        "https://style-frame-1i9s.onrender.com/api/gallery/upload",
         formData,
         {
           headers: {
