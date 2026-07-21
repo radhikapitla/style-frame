@@ -19,7 +19,7 @@ function Gallery() {
   const fetchImages = async () => {
     try {
       const res = await axios.get(
-        "http://localhost:5000/api/gallery"
+        "https://style-frame-1i9s.onrender.com/api/gallery"
       );
       setGalleryImages(res.data);
     } catch (err) {
@@ -30,7 +30,7 @@ function Gallery() {
   if (!selectedImage) return;
    try {
     await axios.delete(
-      `http://localhost:5000/api/gallery/${selectedImage.id}`,
+      `https://style-frame-1i9s.onrender.com/api/gallery/${selectedImage.id}`,
       {
     headers: {
       "x-admin": localStorage.getItem("isAdmin") || "false",
@@ -60,7 +60,7 @@ function Gallery() {
               key={photo.id}
               onClick={() => setSelectedImage(photo)}
               className="cursor-pointer overflow-hidden rounded-xl bg-gray-900 shadow-lg transition duration-300 hover:scale-105">
-              <img src={`http://localhost:5000/uploads/${photo.image_url}`}
+              <img src={`https://style-frame-1i9s.onrender.com/uploads/${photo.image_url}`}
                 alt={photo.title} className="h-64 w-full object-cover"/>
               <div className="p-5">
                 <h2 className="text-xl font-semibold text-yellow-400">
@@ -86,14 +86,14 @@ function Gallery() {
        </button>
        {/* Image */}
        <img
-        src={`http://localhost:5000/uploads/${selectedImage.image_url}`}
+        src={`https://style-frame-1i9s.onrender.com/uploads/${selectedImage.image_url}`}
         alt={selectedImage.title}
         className="mx-auto max-h-[75vh] rounded-xl object-contain"/>
        <h2 className="mt-6 text-center text-3xl font-bold text-yellow-400">
         {selectedImage.title}
        </h2>
        <div className="mt-8 flex justify-center gap-4">
-        <a href={`http://localhost:5000/uploads/${selectedImage.image_url}`}
+        <a href={`https://style-frame-1i9s.onrender.com/uploads/${selectedImage.image_url}`}
           download
           className="flex items-center gap-2 rounded-lg bg-cyan-500 px-6 py-3 font-semibold text-white transition hover:bg-cyan-600">
           <FaDownload />Download </a>
