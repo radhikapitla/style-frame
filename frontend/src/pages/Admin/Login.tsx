@@ -19,7 +19,7 @@ function Login() {
     "admin",
     JSON.stringify(res.data.admin)
     );
-    window.location.href = "/admin/dashboard";}
+    window.location.href = "/style-frame/#/admin/dashboard";}
 
     } catch (err: any) {
       console.error(err);
