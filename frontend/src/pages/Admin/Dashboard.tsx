@@ -13,7 +13,7 @@ function Dashboard() {
 
   useEffect(() => {
    if (localStorage.getItem("isAdmin") !== "true") {
-    window.location.href = "/admin/login";
+    window.location.href = "/style-frame/#/admin/login";
     return;
   }
   fetchBookingCount();
@@ -107,7 +107,7 @@ function Dashboard() {
             {bookingCount}
           </p>
             </button>
-      <button onClick={() => window.location.href = "/gallery"}
+      <button onClick={() => window.location.href = "/style-frame/#/gallery"}
       className="rounded-xl bg-gray-800 p-6 shadow-lg text-left hover:bg-cyan-600 transition">
       <h2 className="text-xl font-semibold">
       Gallery 
@@ -184,7 +184,7 @@ function Dashboard() {
         type="button" onClick={() => {
         localStorage.removeItem("isAdmin");
         localStorage.removeItem("admin");
-        window.location.href = "/admin/login";
+        window.location.href = "/style-frame/#/admin/login";
         }}
         className="rounded-lg bg-red-600 px-5 py-2 font-semibold text-white hover:bg-red-700">
         Logout
