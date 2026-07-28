@@ -12,9 +12,12 @@ const db = mysql.createConnection({
     minVersion: "TLSv1.2",
     rejectUnauthorized: true,
   },
+waitForConnections: true,
+  connectionLimit: 10,
+  queueLimit: 0
 });
 
-db.connect((err) => {
+db.getConnection((err, connection) => {
   if (err) {
     console.log("Database Connection Failed");
     console.log(err);
